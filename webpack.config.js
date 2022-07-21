@@ -1,14 +1,14 @@
 const prod = process.env.NODE_ENV === 'production';
 const path = require('path');
 const { DefinePlugin } = require('webpack');
-const filename = `bundle.js`;
+
 
 module.exports = {
 	entry: './app.js',
 	mode: "production",
 	output: {
 		path: path.resolve('./output'),
-		filename,
+		filename: 'bundle.js',
 	},
 	plugins: [
 		new DefinePlugin({
@@ -16,7 +16,7 @@ module.exports = {
 		})
 	]
 };
-prod && (module.exports.module = {
+module.exports.module = {
 	rules: [{
 		test: /\.js$/,
 		exclude: /(node_modules|bower_components)/,
@@ -27,4 +27,4 @@ prod && (module.exports.module = {
 			}
 		}
 	}]
-});
+}

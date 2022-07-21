@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack-cli --config ./webpack.config.js --watch --verbose --debug"
+    "start": "live-server --port=6969 --host=0.0.0.0 --verbose",
+    "build": "webpack-cli --config ./webpack.config.js --verbose",
+    "initg": "npm i --global live-server",
+    "install": "npm run build && npm run initg && npm run start"
   },
   "dependencies": {
     "@babel/core": "^7.11.6",
@@ -9,6 +11,7 @@
     "babel-loader": "^8.1.0",
     "bad-words": "^3.0.4",
     "didyoumean2": "^4.1.0",
+    "live-server": "^1.2.2",
     "md5": "^2.3.0",
     "msgpack-lite": "^0.1.26",
     "url": "^0.11.0",
