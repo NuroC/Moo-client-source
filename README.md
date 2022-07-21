@@ -12,6 +12,13 @@ git clone https://github.com/NuroC/Moo-client-source
 cd Moo-Client-Source
 ```
 
+To open the just created workspace, you can use: 
+
+```bash
+code .
+```
+> this will open the workspace in the VS Code editor.
+
 Then, you need to install the dependencies.
 
 ```bash
@@ -34,6 +41,7 @@ Ready for changes
 You're all set!
 
 Now just join MooMoo.io with the script from [here](./scripts/bundleReplacer.user.js)
+You can install it by clicking [here](https://github.com/NuroC/Moo-client-source/raw/main/scripts/bundleReplacer.user.js)
 
 Enjoy!
 
