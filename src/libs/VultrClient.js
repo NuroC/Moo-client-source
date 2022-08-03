@@ -519,60 +519,60 @@ Array.prototype.flatMap = function (f) {
 };
 
 
-class VultrClient {
-    constructor(baseUrl, devPort, lobbySize, lobbySpread, rawIPs, debugLog) {
-        this.baseUrl = baseUrl;
-        this.devPort = devPort;
-        this.lobbySize = lobbySize;
-        this.lobbySpread = lobbySpread;
-        this.rawIPs = rawIPs;
-        this.debugLog = debugLog;
+// class VultrClient {
+//     constructor(baseUrl, devPort, lobbySize, lobbySpread, rawIPs, debugLog) {
+//         this.baseUrl = baseUrl;
+//         this.devPort = devPort;
+//         this.lobbySize = lobbySize;
+//         this.lobbySpread = lobbySpread;
+//         this.rawIPs = rawIPs;
+//         this.debugLog = debugLog;
 
-        this.servers = {};
+//         this.servers = {};
 
-        this.errorCallback = function (error) {
-            console.error(error);
-        }
-    }
-    get regionInfo() {
-        return {
-            "vultr:1": { name: "New Jersey", },
-            "vultr:2": { name: "Chicago", },
-            "vultr:3": { name: "Dallas", },
-            "vultr:4": { name: "Seattle", },
-            "vultr:5": { name: "Los Angeles", },
-            "vultr:6": { name: "Atlanta", },
-            "vultr:7": { name: "Amsterdam", },
-            "vultr:8": { name: "London", },
-            "vultr:9": { name: "Frankfurt", },
-            "vultr:12": { name: "Silicon Valley", },
-            "vultr:19": { name: "Sydney", },
-            "vultr:24": { name: "Paris", },
-            "vultr:25": { name: "Tokyo", },
-            "vultr:39": { name: "Miami", },
-            "vultr:40": { name: "Singapore", }
-        }
-    }
-    start(callback, errorCallback) {
-        let servers = window.servers;
-        if (!servers) {
-            errorCallback("No servers found.");
-            return;
-        }
-        this.servers = servers;
-        this.processServers(servers);
+//         this.errorCallback = function (error) {
+//             console.error(error);
+//         }
+//     }
+//     get regionInfo() {
+//         return {
+//             "vultr:1": { name: "New Jersey", },
+//             "vultr:2": { name: "Chicago", },
+//             "vultr:3": { name: "Dallas", },
+//             "vultr:4": { name: "Seattle", },
+//             "vultr:5": { name: "Los Angeles", },
+//             "vultr:6": { name: "Atlanta", },
+//             "vultr:7": { name: "Amsterdam", },
+//             "vultr:8": { name: "London", },
+//             "vultr:9": { name: "Frankfurt", },
+//             "vultr:12": { name: "Silicon Valley", },
+//             "vultr:19": { name: "Sydney", },
+//             "vultr:24": { name: "Paris", },
+//             "vultr:25": { name: "Tokyo", },
+//             "vultr:39": { name: "Miami", },
+//             "vultr:40": { name: "Singapore", }
+//         }
+//     }
+//     start(callback, errorCallback) {
+//         let servers = window.servers;
+//         if (!servers) {
+//             errorCallback("No servers found.");
+//             return;
+//         }
+//         this.servers = servers;
+//         this.processServers(servers);
 
-        this.callback = callback;
-        this.errorCallback = errorCallback;
+//         this.callback = callback;
+//         this.errorCallback = errorCallback;
 
-        let query = this.parseServerQuery
+//         let query = this.parseServerQuery
 
-        if(query) {
-            this.log("Found Server in query.")
-            this.connect(query[0], query[1], query[2]);
-        }
-    }
-    // TODO: continue here   
-}
+//         if(query) {
+//             this.log("Found Server in query.")
+//             this.connect(query[0], query[1], query[2]);
+//         }
+//     }
+//     // TODO: continue here   
+// }
 
 module.exports = VultrClient;
