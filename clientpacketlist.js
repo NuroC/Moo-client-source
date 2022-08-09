@@ -1,0 +1,18 @@
+let SendPackets = {
+    "Mouse/Space_attack": {Packet: "c", Usage: ["c", ["0/1", "Angle"]]},
+    "E_Auto_attack": {Packet: "7", Usage: ["7", ["0/1", "Angle"]]},
+    "Send_Chat": {Packet: "ch", Usage: ["ch", ["Text"]]},
+    "Clan_Accept_Player": {Packet: "11", Usage: ["11", ["Player_id"]]},
+    "Create_Clan": {Packet: "8", Usage: ["8", ["Clan_Name"]]},
+    "Clan_Kick_Player": {Packet: "12", Usage: ["12", ["Player_id"]]},
+    "Clan_Send_Join_Request": {Packet: "10", Usage: ["10", ["Clan_Name"]]},
+    "Hat_Buy/Equip": {Packet: "13c", Usage: ["13c", ["1", "Hat_Id", "0, 1"]], Note: "first(0 for unequip 1 for equip), second(0 for hats, 1 for accessories)"},
+    "Hat_Buy": {Packet: "13", Usage: ["13", ["1", "Hat_Id", "0, 1"]], Note: "first(0 for unequip 1 for equip), second(0 for hats, 1 for accessories)"},
+    "Clan_Leave": {Packet: "9", Usage: ["9"]},
+    "Return_Ping_Packet": {Packet: "pp", Usage: ["pp"]},
+    "Item_Hold": {Packet: "5", Usage: ["5", ["Item_Id"]]},
+    "Upgrade_Select": {Packet: "6", Usage: ["6", ["Item_Id"]]},
+    "Angle_Set": {Packet: "2", Usage: ["2", ["Angle"]]},
+    "Player_Spawn": {Packet: "sp", Usage: ["sp", [{name: "Player_Name", moofoll: true/false, skin: "Skin"}]], Note: "moofoll is 100 resources when spawn, skin is number from 0 to 9"},
+    "Window_Focus?": {Packet: "rmd", Usage: ["rmd"]},
+}
